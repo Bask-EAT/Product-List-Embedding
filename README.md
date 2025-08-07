@@ -8,24 +8,16 @@ Jina CLIP v2 임베딩과 구글 Firestore 벡터 DB를 이용해 **텍스트·�
 ## 📂 프로젝트 구조
 ```
 ./
-├── firestore_vector_db.py
-├── jina_clip_embedding.py
+├── firestore_vector_db.py.     # Firestore 벡터 DB CRUD 및 검색
 ├── key/
-│   └── key.json
-├── main.py
-├── multimodal_rag_system.py
-├── README.md
-├── requirements.txt
-└── utils.py
-
-.
-├── jina_clip_embedding.py      # CLIP 모델 로드 및 임베딩
-├── firestore_vector_db.py      # Firestore 벡터 DB CRUD 및 검색
-├── multimodal_rag_system.py    # 텍스트·이미지·멀티모달 검색 로직
-├── utils.py                    # 환경 변수 검증·검색 결과 UI
-├── .env                       # 환경 변수 저장용 파일
+│   └── key.json                # Firebase 키 파일
+├── jina_clip_embedding.py.     # CLIP 모델 로드 및 임베딩
+├── multimodal_rag_system.py.   # 텍스트·이미지·멀티모달 검색 로직
+├── .env                        # 환경 변수 저장용 파일
 ├── requirements.txt            # 의존성 설치
-└── main.py                     # Streamlit 실행 진입점
+├── utils.py.                   # 환경 변수 검증·검색 결과 UI
+├── main.py.                    # Streamlit 실행 진입점
+└── README.md                 
 ```
 
 ## 🛠️ 사전 준비
