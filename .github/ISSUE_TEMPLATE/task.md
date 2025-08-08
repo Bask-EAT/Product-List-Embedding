@@ -1,15 +1,10 @@
 ---
 name: Task
-about: todo list
+about: 프로젝트 내에서 해야 할 작업을 구체적으로 기록하고 진행 상황을 추적할 때 사용
 title: "[TODO]"
 labels: ''
 assignees: ''
 
----
-
----
-name: 📋 Task (할 일)
-about: 프로젝트 내에서 해야 할 일을 기록하고 추적할 때 사용하세요
 ---
 
 ## 📌 할 일(Task) 제목
