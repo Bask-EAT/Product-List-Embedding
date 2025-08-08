@@ -17,6 +17,7 @@ Jina CLIP v2 임베딩과 구글 Firestore 벡터 DB를 이용해 **텍스트·�
 ├── requirements.txt            # 의존성 설치
 ├── utils.py.                   # 환경 변수 검증·검색 결과 UI
 ├── main.py.                    # Streamlit 실행 진입점
+├── server.py.                  # FastAPI 서버 실행 진입점
 └── README.md                 
 ```
 
@@ -34,8 +35,13 @@ Jina CLIP v2 임베딩과 구글 Firestore 벡터 DB를 이용해 **텍스트·�
 4. `.env` 파일에 설정
 
 ## 🚀 실행 방법
+스트림잇 실행
 ```
 streamlit run main.py
+```
+api 서버 실행
+```
+python server.py
 ```
 
 ## 🖥️ UI 기능
@@ -77,3 +83,13 @@ streamlit run main.py
 5. `main`  
    - 스트림릿 페이지·사이드바·탭 구성  
    - 유저 입력 처리 및 결과 표시
+
+## ⚙️ API
+1. 서버 상태
+   - `/health` : 서버 상태 확인
+2. 벡터 검색
+   - `/search/text` : 상품 텍스트 검색
+   - `/search/image` : 상품 이미지 검색
+   - `/search/multimodal` : 상품 텍스트+이미지 검색
+3. 파이어스토어 업데이트
+   - `/start-index` : 파이어스토어 인덱스 생성(is_emb : R->D, 벡터 필드 생성)
